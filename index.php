@@ -71,7 +71,7 @@
 
         <!-- SESSÃO FOOTER  -->
         <div id="footer">
-            <h2 style="text-align: center; padding-top: 10px;"></h2>
+            <h2 style="text-align: center; padding-top: 10px;"><p>Todos os direitos reservados &copy;>DTP Software</a> 2021</p></h2>
         </div>
     </div>
 </body>
