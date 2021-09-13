@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Shopping Online</title>
 </head>
 <body>
@@ -11,8 +13,8 @@
     <div class="main">
         <!-- O HEADER COMEÇA AQUI -->
         <div class="header">
-            <a href="#"><img id="logo_image" src="#"></a>
-            <img id="logo_image" src="#" style="width: 60%;" />
+            <a href="index.php"><img id="logo_image" src="imagens/logo"></a>
+            <img id="logo_image" src="imagens/logo1" style="width: 60%;" />
         </div>
         <!-- O HEADER TERMINA AQUI -->
 
@@ -47,9 +49,29 @@
 
                 <div id="sidebar_title">Marcas</div>
                 <ul id="gatos">
-                    
+
                 </ul>
             </div>
+
+            <div id="content_area">
+                <div id="carrinho_compras">
+                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px;">
+
+                    <i>Total Itens: </i><b>Preço Tota:</b>
+                    <a href="#" style="color: yellow; text-decoration: none"><i>Ir Para o Carrinho</i></a>
+                    </span>
+                </div>
+
+                <div id="produtos_box">
+
+                </div>
+            </div>
+        </div>
+        <!-- SESSÃO CONTENT TERMINA AQUI -->
+
+        <!-- SESSÃO FOOTER  -->
+        <div id="footer">
+            <h2 style="text-align: center; padding-top: 10px;"></h2>
         </div>
     </div>
 </body>
