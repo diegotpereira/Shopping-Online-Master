@@ -121,7 +121,7 @@ body {
 }
 
 .menubar {
-    width: 100%;
+    width: 1000px;
     height: 50px;
     background: grey;
 }
@@ -166,14 +166,14 @@ body {
 }
 
 #content_area {
-    width: 800px;
+    width: 700px;
     margin: auto;
 }
 
 #sidebar {
     width: 200px;
     background: black;
-    float: left;
+    float: right;
 }
 
 #sidebar_title {
@@ -185,7 +185,7 @@ body {
 }
 
 #gatos {
-    text-align: center;
+    text-align: left;
     padding: 5px;
 }
 
@@ -196,7 +196,7 @@ body {
 
 #gatos a {
     text-decoration: none;
-    color: white;
+    color: orange;
     padding: 8px;
     margin: 5px;
     font-size: 22px;
@@ -206,7 +206,7 @@ body {
 #gatos a:hover {
     color: red;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #produtos_box {
@@ -214,6 +214,17 @@ body {
     text-align: center;
     margin-left: 30px;
     margin-bottom: 10px;
+    padding: 20px;
+}
+
+#produtos_box a {
+    text-decoration: none;
+}
+
+#produtos_box a:hover {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #unico_produto {
@@ -227,7 +238,7 @@ body {
 }
 
 #carrinho_compras {
-    width: 900px;
+    width: 800px;
     height: 50px;
     background: black;
     color: white;
