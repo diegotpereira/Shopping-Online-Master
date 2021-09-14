@@ -13,7 +13,8 @@
 
     <title>Shopping Online</title>
 
-    <link rel="stylesheet" href="css/estilo.css" media="all">
+    <!-- <link rel="stylesheet" href="css/estilo.css" media="all"> -->
+    <style><?php include 'css/estilo.css'; ?></style>
 
 </head>
 <body>
@@ -27,7 +28,7 @@
         <!-- O HEADER TERMINA AQUI -->
 
         <!-- BARRA DE NAVEGAÇÃO COMEÇA AQUI -->
-        <div class="menuBar">
+        <div class="menubar">
             <ul id="menu">
                 <li><a href="">Home</a></li>
                 <li><a href="todos_produtos.php">Produtos</a></li>
@@ -47,17 +48,21 @@
 
         <!-- BARRA DE NAVEGAÇÃO TERMINA AQUI -->
 
-        <!-- A SESSÃO CONTENT COMEÇA AQUI -->
+        <!-- A SESSÃO CONTENT COMEÇA AQUI 0-->
         <div class="content">
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
                 <ul id="cats">
-
+                    <?php 
+                        getCategorias();
+                    ?>
                 </ul>
 
                 <div id="sidebar_title">Marcas</div>
                 <ul id="cats">
-
+                    <?php
+                       getMarcas();
+                    ?>
                 </ul>
             </div>
 
@@ -71,7 +76,9 @@
                 </div>
 
                 <div id="produtos_box">
-
+                    <?php
+                        getProduto();
+                    ?>
                 </div>
             </div>
         </div>
