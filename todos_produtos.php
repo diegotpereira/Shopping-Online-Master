@@ -34,8 +34,8 @@
             </ul>
 
             <div id="form">
-                <form method="get" action="" enctype="multipart/form-data">
-                   <input type="text" name="" placeholder="" />
+                <form method="get" action="resultados.php" enctype="multipart/form-data">
+                   <input type="text" name="usuario_query" placeholder="Sinta-se à vontade para pesquisar" />
                    <input type="submit" name="buscar" value="buscar" />
                 </form>
             </div>
@@ -47,12 +47,12 @@
         <div class="content">
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
-                <ul id="gatos">
+                <ul id="cats">
 
                 </ul>
 
                 <div id="sidebar_title">Marcas</div>
-                <ul id="gatos">
+                <ul id="cats">
 
                 </ul>
             </div>

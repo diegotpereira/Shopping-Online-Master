@@ -121,7 +121,7 @@ body {
 }
 
 .menubar {
-    width: 1000px;
+    width: 100%;
     height: 50px;
     background: grey;
 }
@@ -166,14 +166,14 @@ body {
 }
 
 #content_area {
-    width: 700px;
+    width: 1000px;
     margin: auto;
 }
 
 #sidebar {
     width: 200px;
     background: black;
-    float: right;
+    float: left;
 }
 
 #sidebar_title {
@@ -184,17 +184,17 @@ body {
     padding: 10px;
 }
 
-#gatos {
+#cats {
     text-align: left;
     padding: 5px;
 }
 
-#gatos li {
+#cats li {
     list-style: none;
     margin: 5px;
 }
 
-#gatos a {
+#cats a {
     text-decoration: none;
     color: orange;
     padding: 8px;
@@ -203,7 +203,7 @@ body {
     font-family: COMIC SANS MS;
 }
 
-#gatos a:hover {
+#cats a:hover {
     color: red;
     font-weight: bold;
     text-decoration: none;

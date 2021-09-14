@@ -35,8 +35,8 @@
             </ul>
 
             <div id="form">
-                <form method="get" action="" enctype="multipart/form-data">
-                   <input type="text" name="" placeholder="" />
+                <form method="get" action="resultados.php" enctype="multipart/form-data">
+                   <input type="text" name="usuario_query" placeholder="Sinta-se à vontade para pesquisar" />
                    <input type="submit" name="buscar" value="buscar" />
                 </form>
             </div>
@@ -48,12 +48,12 @@
         <div class="content">
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
-                <ul id="gatos">
+                <ul id="cats">
 
                 </ul>
 
                 <div id="sidebar_title">Marcas</div>
-                <ul id="gatos">
+                <ul id="cats">
 
                 </ul>
             </div>
@@ -90,7 +90,7 @@
                             <img src='admin_area/produto_imagens/$pro_imagem' width='300' height='300' />
                             <p> R$ <b>$pro_preco</b></p>
                             <a href='index.php' style='float:left'>Voltar</a>
-                            <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionaro ao Carrinho</button></a>
+                            <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                             <br></br>
                             <p>$pro_desc</p>
                         </div>";
