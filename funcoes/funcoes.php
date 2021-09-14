@@ -15,7 +15,7 @@
 
               $run_pro = mysqli_query($data_base, $get_pro);
 
-              while($row_pro = mysqli_fetch_assoc($run_pro)) {
+              while($row_pro = mysqli_fetch_array($run_pro)) {
                   $pro_id = $row_pro['produto_id'];
                   $pro_cat = $row_pro['produto_cat'];
                   $pro_marca = $row_pro['produto_marca'];
