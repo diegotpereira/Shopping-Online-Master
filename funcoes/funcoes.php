@@ -28,7 +28,7 @@
                             <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                             <p> R$ <br>$pro_preco</b></p>
                             <a href='detalhes.php?pro_id = $pro_id' style='float:left'>Detalhes</a>
-                            <a href='index.php?add_carrinho =$pro_id'><button style='float:right'>Adicionaro ao Carrinho</button></a>
+                            <a href='index.php?add_carrinho =$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                         </div>";
               }
           }
@@ -188,5 +188,41 @@
         }
         
     }
+  }
+
+  function precoTotal() {
+      $total = 0;
+      global $data_base;
+      $ip = getIp();
+      $selecionaPreco = "SELECT * FROM carrinho WHERE ip_add = '$ip'";
+      $run_preco = mysqli_query($data_base, $selecionaPreco);
+
+      while($p_preco = mysqli_fetch_array($run_preco)) {
+          $pro_id = $p_preco['p_id'];
+          $pro_preco = "SELECT * FROM produtos WHERE produto_id = '$pro_id'";
+          $run_pro_preco = mysqli_query($data_base, $pro_preco);
+
+          while($pp_preco = mysqli_fetch_array($run_pro_preco)) {
+              $produto_preco = array($pp_preco['produto_preco']);
+              $values = array_sum($produto_preco);
+              $total += $values;
+          }
+      }
+
+      echo "R$ $total";
+  }
+
+  function getIp() {
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        # code...
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        # code...
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    return $ip;
   }
 ?>
