@@ -1,8 +1,6 @@
 <?php
- session_start();
  include("funcoes/funcoes.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,14 +12,13 @@
     <title>Shopping Online</title>
 
     <link rel="stylesheet" href="css/estilo.css" media="all">
-
 </head>
 <body>
     <!-- O CONTAINER PRINCIPAL COMEÇA AQUI -->
     <div class="main">
         <!-- O HEADER COMEÇA AQUI -->
         <div class="header">
-            <a href="index.php"><img id="logo_image" src="imagens/logo"></a>
+            <img id="logo_image" src="imagens/logo" />
             <img id="logo_image" src="imagens/logo1" style="width: 60%;" />
         </div>
         <!-- O HEADER TERMINA AQUI -->
@@ -63,16 +60,43 @@
 
             <div id="content_area">
                 <div id="carrinho_compras">
-                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px;">
+                    <span style="float: right; font-size: 18px; padding: 5px; line-height: 40px">
+                    Bem-Vindo !
 
-                    <i>Total Itens: </i><b>Preço Tota:</b>
-                    <a href="#" style="color: yellow; text-decoration: none"><i>Ir Para o Carrinho</i></a>
+                     <b style="color: yellow;">Carrinho de Compras: </b>Total Itens: Preço Total: </b>
+                    <a href="#" style="color: yellow">Ir Para o Carrinho</a>
                     </span>
                 </div>
 
-                <div id="produtos_box">
+                <?php
+                 if (isset($_GET['pro_id'])) {
+                     # code...
+                     $produto_id = $_GET['pro_id'];
+                     $get_pro = "SELECT * FROM produtos WHERE produto_id = $produto_id";
 
-                </div>
+                     $run_pro = mysqli_query($data_base, $get_pro);
+
+                      while($row_pro = mysqli_fetch_array($run_pro)) {
+                          $pro_id = $row_pro['produto_id'];
+                          $pro_cat = $row_pro['produto_cat'];
+                          $pro_marca = $row_pro['produto_marca'];
+                          $pro_titulo = $row_pro['produto_titulo'];
+                          $pro_desc = $row_pro['produto_desc'];
+                          $pro_preco = $row_pro['produto_preco'];
+                          $pro_imagem = $row_pro[5];
+
+                          echo "<div id='unico_produto'>
+                            <h3>$pro_titulo</h3>
+                            <img src='admin_area/produto_imagens/$pro_imagem' width='300' height='300' />
+                            <p> R$ <b>$pro_preco</b></p>
+                            <a href='index.php' style='float:left'>Voltar</a>
+                            <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionaro ao Carrinho</button></a>
+                            <br></br>
+                            <p>$pro_desc</p>
+                        </div>";
+                      }
+                 }
+                ?>
             </div>
         </div>
         <!-- SESSÃO CONTENT TERMINA AQUI -->
