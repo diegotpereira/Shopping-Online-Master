@@ -78,6 +78,8 @@
                 <div id="produtos_box">
                     <?php
                         getProduto();
+                        getCategoriaPro();
+                        getMarcaPro();
                     ?>
                 </div>
             </div>
