@@ -52,18 +52,18 @@
         <div class="content">
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
-                <ul id="cats">
-                    <?php 
-                        getCategorias();
-                    ?>
-                </ul>
+                    <ul id="cats">
+                        <?php 
+                            getCategorias();
+                        ?>
+                    </ul>
 
                 <div id="sidebar_title">Marcas</div>
-                <ul id="cats">
-                    <?php
-                       getMarcas();
-                    ?>
-                </ul>
+                    <ul id="cats">
+                        <?php
+                        getMarcas();
+                        ?>
+                    </ul>
             </div>
 
             <div id="content_area">

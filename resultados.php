@@ -24,7 +24,7 @@
         <!-- O HEADER TERMINA AQUI -->
 
         <!-- BARRA DE NAVEGAÇÃO COMEÇA AQUI -->
-        <div class="menuBar">
+        <div class="menubar">
             <ul id="menu">
                 <li><a href="">Home</a></li>
                 <li><a href="todos_produtos.php">Produtos</a></li>

@@ -24,7 +24,7 @@
         <!-- O HEADER TERMINA AQUI -->
 
         <!-- BARRA DE NAVEGAÇÃO COMEÇA AQUI -->
-        <div class="menuBar">
+        <div class="menubar">
             <ul id="menu">
                 <li><a href="">Home</a></li>
                 <li><a href="todos_produtos.php">Produtos</a></li>
@@ -49,12 +49,16 @@
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
                 <ul id="cats">
-
+                    <?php
+                        getCategorias();
+                    ?>
                 </ul>
 
                 <div id="sidebar_title">Marcas</div>
                 <ul id="cats">
-
+                   <?php
+                       getMarcas();
+                    ?>
                 </ul>
             </div>
 
@@ -64,7 +68,7 @@
                     Bem-Vindo !
 
                      <b style="color: yellow;">Carrinho de Compras: </b>Total Itens: Preço Total: </b>
-                    <a href="#" style="color: yellow">Ir Para o Carrinho</a>
+                    <a href="carrinho.php" style="color: yellow">Ir Para o Carrinho</a>
                     </span>
                 </div>
 
