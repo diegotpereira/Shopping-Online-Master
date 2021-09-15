@@ -1,5 +1,19 @@
 <?php
   $data_base = mysqli_connect("localhost", "root", "root", "db_shopping_online");
+
+  function getIp() {
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        # code...
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        # code...
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    return $ip;
+  }
   
   function getProduto() {
       if (!isset($_GET['cat'])) {
@@ -28,8 +42,8 @@
                             <h3>$pro_titulo</h3>
                             <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                             <p> R$ <br>$pro_preco</b></p>
-                            <a href='detalhes.php?pro_id = $pro_id' style='float:left'>Detalhes</a>
-                            <a href='index.php?add_carrinho =$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
+                            <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
+                            <a href='index.php?add_carrinho=$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                         </div>";
               }
           }
@@ -99,7 +113,7 @@
                         <h3>$pro_titulo</h3>
                             <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                             <p> R$ <b>$pro_preco</b></p> 
-                            <a href='detalhes.php?pro_id = $pro_id' style='float:left'>Detalhes</a>
+                            <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
                             <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                       </div>";
             }
@@ -140,7 +154,7 @@
                         <h3>$pro_titulo</h3> 
                         <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                         <p> R$ <b>$pro_preco</b></p>
-                        <a href='detalhes.php?pro_id = $pro_id' style='float:left'>Detalhes</a>
+                        <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
                         <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                         </div> ";
               }
@@ -182,7 +196,7 @@
                       <h3>$pro_titulo</h3> 
                       <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                       <p> R$ <b>$pro_preco</b></p>
-                      <a href='detalhes.php?pro_id = $pro_id' style='float:left'>Detalhes</a>
+                      <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
                       <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
                       </div> ";
             }
@@ -213,20 +227,6 @@
       echo "R$ $total";
   }
 
-  function getIp() {
-
-    $ip = $_SERVER['REMOTE_ADDR'];
-
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        # code...
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        # code...
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    return $ip;
-  }
-
   function carrinho() {
       global $data_base;
 
@@ -244,7 +244,7 @@
               echo "<script>window.alert('O produto já foi adicionado uma vez ..!')</script>";
               echo "<script>window.open('index.php', 'self')</script>";
           }else {
-              $inserir_pro = "INSERT INTO carrinho (p_id, qtd, id_add) VALUES ('$pro_id', '1', '$ip')";
+              $inserir_pro = "INSERT INTO carrinho (p_id, qtd, ip_add) VALUES ('$pro_id', '1', '$ip')";
               $run_pro = mysqli_query($data_base, $inserir_pro);
 
               echo "<script>window.open('index.php', 'self')</script>";
@@ -252,7 +252,7 @@
       }
   }
 
-  function totao_itens() {
+  function total_itens() {
       global $data_base;
 
       $ip = getIp();

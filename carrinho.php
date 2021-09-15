@@ -76,7 +76,7 @@
 
                     <b style="font-size: 25px;"> Bem-Vindo ! &emsp; &emsp; &emsp; &emsp;</b>
 
-                    &emsp;<i>Total Itens:<?php precoTotal(); ?> </i> &emsp;<b>Preço Total:</b><?php precoTotal(); ?>&emsp;
+                    &emsp;<i>Total Itens:<?php total_itens(); ?> </i> &emsp;<b>Preço Total:</b><?php precoTotal(); ?>&emsp;
                     <a href="index.php" style="color: yellow; text-decoration: none"><i>Voltar para</i><b>Home &emsp;</b></a>
                     </span>
                 </div>
