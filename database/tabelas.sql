@@ -89,7 +89,7 @@ CREATE TABLE `marcas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping de dados para tabelas `marcas`
+-- Dados para tabelas `marcas`
 --
 
 INSERT INTO `marcas` (`marca_id`, `marca_titulo`) VALUES
@@ -114,3 +114,29 @@ INSERT INTO `marcas` (`marca_id`, `marca_titulo`) VALUES
 --
 ALTER TABLE `marcas`
   MODIFY `marca_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+
+--
+-- Estrutura da tabela para o `carrinho de compras`
+--
+
+CREATE TABLE `carrinho` (
+  `p_id` int(10) NOT NULL,
+  `qtd` int(10) NOT NULL,
+  `ip_add` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Índices para tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  ADD PRIMARY KEY (`p_id`);
+
+
+--
+-- Dados para a tabela `carrinho
+--
+
+INSERT INTO `carrinho` (`p_id`, `qtd`, `ip_add`) VALUES
+(18, 1, '::1');

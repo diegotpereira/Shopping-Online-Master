@@ -225,4 +225,50 @@
     }
     return $ip;
   }
+
+  function carrinho() {
+      global $data_base;
+
+      if (isset($_GET['add_carrinho'])) {
+          # code...
+          $ip = getIp();
+          $pro_id = $_GET['add_carrinho'];
+
+          $check_pro = "SELECT * FROM carrinho WHERE ip_add = '$ip' AND p_id = '$pro_id'";
+          $run_check = mysqli_query($data_base, $check_pro) or die('error');
+          $test = mysqli_num_rows($run_check);
+
+          if ($test > 0) {
+              # code...
+              echo "<script>window.alert('O produto já foi adicionado uma vez ..!')</script>";
+              echo "<script>window.open('index.php', 'self')</script>";
+          }else {
+              $inserir_pro = "INSERT INTO carrinho (p_id, qtd, id_add) VALUES ('$pro_id', '1', '$ip')";
+              $run_pro = mysqli_query($data_base, $inserir_pro);
+
+              echo "<script>window.open('index.php', 'self')</script>";
+          }
+      }
+  }
+
+  function totao_itens() {
+      global $data_base;
+
+      $ip = getIp();
+
+      if (isset($_GET['add_carrinho'])) {
+          # code...
+
+          $get_itens = "SELECT * FROM carrinho WHERE ip_add = '$ip'";
+          $run_itens = mysqli_query($data_base, $get_itens);
+          $count_itens = mysqli_num_rows($run_itens);
+
+      } else {
+          # code...
+          $get_itens = "SELECT * FROM carrinho WHERE ip_add = '$ip'";
+          $runs_itens = mysqli_query($data_base, $get_itens);
+          $count_itens = mysqli_num_rows($runs_itens);
+      }
+      echo $count_itens;
+  }
 ?>

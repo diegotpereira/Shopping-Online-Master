@@ -30,7 +30,7 @@
                 <li><a href="todos_produtos.php">Produtos</a></li>
                 <li><a href="">Conta</a></li>
                 <li><a href="">Entrar</a></li>
-                <li><a href="">Carrinho de Compras</a></li>
+                <li><a href="carrinho.php">Carrinho de Compras</a></li>
                 <li><a href="">Contato</a></li>
             </ul>
 

@@ -29,7 +29,7 @@
                 <li><a href="todos_produtos.php">Produtos</a></li>
                 <li><a href="">Conta</a></li>
                 <li><a href="">Entrar</a></li>
-                <li><a href="">Carrinho de Compras</a></li>
+                <li><a href="carrinho.php">Carrinho de Compras</a></li>
                 <li><a href="">Contato</a></li>
             </ul>
 
@@ -84,13 +84,14 @@
                           $pro_preco = $row_pro['produto_preco'];
                           $pro_imagem = $row_pro[5];
 
-                          echo "<div id='unico_produto'>
-                            <h3>$pro_titulo</h3>
-                            <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
-                            <p> R$ <b>$pro_preco</b></p>
-                            <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
-                            <a href='index.php?pro_id =$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
-                        </div>";
+                          echo 
+                            "<div id='unico_produto'>
+                                <h3>$pro_titulo</h3>
+                                <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
+                                <p> R$ <b>$pro_preco</b></p>
+                                <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
+                                <a href='index.php?pro_id =$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
+                            </div>";
                       }
                     ?>
                 </div>

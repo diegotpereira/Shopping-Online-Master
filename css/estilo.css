@@ -185,7 +185,7 @@ body {
 }
 
 #cats {
-    text-align: left;
+    text-align: center;
     padding: 5px;
 }
 
@@ -196,7 +196,7 @@ body {
 
 #cats a {
     text-decoration: none;
-    color: orange;
+    color: white;
     padding: 8px;
     margin: 5px;
     font-size: 22px;
@@ -206,7 +206,7 @@ body {
 #cats a:hover {
     color: red;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #produtos_box {
@@ -214,17 +214,6 @@ body {
     text-align: center;
     margin-left: 30px;
     margin-bottom: 10px;
-    padding: 20px;
-}
-
-#produtos_box a {
-    text-decoration: none;
-}
-
-#produtos_box a:hover {
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 #unico_produto {
@@ -238,7 +227,7 @@ body {
 }
 
 #carrinho_compras {
-    width: 800px;
+    width: 900px;
     height: 50px;
     background: black;
     color: white;
