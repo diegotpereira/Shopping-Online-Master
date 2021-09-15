@@ -67,7 +67,7 @@
                     <b style="font-size: 25px; " >   Bem-Vindo ! &emsp; &emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;</b>
 
                     Total Itens: &emsp; Preço Total: &emsp;</b>
-                    <a href="#" style="color: yellow; text-decoration: none">Ir Para o Carrinho &emsp;&emsp;</a>
+                    <a href="carrinho.php" style="color: yellow; text-decoration: none">Ir Para o Carrinho &emsp;&emsp;</a>
                     </span>
                 </div>
 

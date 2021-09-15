@@ -49,12 +49,16 @@
             <div id="sidebar">
                 <div id="sidebar_title">Categorias</div>
                 <ul id="cats">
-
+                    <?php
+                        getCategorias();
+                    ?>
                 </ul>
 
                 <div id="sidebar_title">Marcas</div>
                 <ul id="cats">
-
+                    <?php
+                       getMarcas();
+                    ?>
                 </ul>
             </div>
 
@@ -69,47 +73,49 @@
                 </div>
 
                 <div id="produtos_box">
-                <?php
-                 if (isset($_GET['buscar'])) {
-                     # code...
-                     $buscar_query = $_GET['usuario_query'];
+                    <?php
+                    if (isset($_GET['buscar'])) {
+                        # code...
+                        $buscar_query = $_GET['usuario_query'];
 
-                     echo '<link rel="stylesheet" href="css/estilo.css" media="all" />';
+                        echo '<link rel="stylesheet" href="css/estilo.css" media="all" />';
 
-                     global $data_base;
+                        global $data_base;
 
-                     $get_pro = "SELECT * FROM produtos WHERE produto_keywords like '%$buscar_query%'";
+                        $get_pro = "SELECT * FROM produtos WHERE produto_keywords like '%$buscar_query%'";
 
-                     $run_pro = mysqli_query($data_base, $get_pro);
+                        $run_pro = mysqli_query($data_base, $get_pro);
 
-                     $count_keywords = mysqli_num_rows($run_pro);
+                        $count_keywords = mysqli_num_rows($run_pro);
 
-                     if ($count_keywords == 0) {
-                         # code...
-                         echo "<script>alert('DESCULPA ! Nenhum produto disponível para sua pesquisa')</script>";
-                         echo "<script>   window.location.href ='index.php'</script>";
-                     } else {
-                         # code...
-                         while($row_pro = mysqli_fetch_array($run_pro)) {
-                            $pro_id = $row_pro['produto_id'];
-                            $pro_cat = $row_pro['produto_cat'];
-                            $pro_marca = $row_pro['produto_marca'];
-                            $pro_titulo = $row_pro['produto_titulo'];
-                            $pro_desc = $row_pro['produto_desc'];
-                            $pro_preco = $row_pro['produto_preco'];
-                            $pro_imagem = $row_pro[5];
-  
-                            echo "<div id='unico_produto'>
-                              <h3>$pro_titulo</h3>
-                              <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180'/>
-                              <p> R$ <b>$pro_preco</b></p>
-                              <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
-                              <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
-                          </div>";
+                        if ($count_keywords == 0) {
+                            # code...
+                            echo "<script>alert('DESCULPA ! Nenhum produto disponível para sua pesquisa')</script>";
+                            echo "<script>   window.location.href ='index.php'</script>";
+                        } else {
+                            # code...
+                            while($row_pro = mysqli_fetch_array($run_pro)) {
+                                $pro_id = $row_pro['produto_id'];
+                                $pro_cat = $row_pro['produto_cat'];
+                                $pro_marca = $row_pro['produto_marca'];
+                                $pro_titulo = $row_pro['produto_titulo'];
+                                $pro_desc = $row_pro['produto_desc'];
+                                $pro_preco = $row_pro['produto_preco'];
+                                $pro_imagem = $row_pro[5];
+    
+                                echo 
+                                
+                                    "<div id='unico_produto'>
+                                        <h3>$pro_titulo</h3>
+                                        <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180'/>
+                                        <p> R$ <b>$pro_preco</b></p>
+                                        <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
+                                        <a href='index.php?pro_id = $pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
+                                    </div>";    
+                            }
                         }
-                     }
-                 }
-                ?>
+                    }
+                    ?>
                 </div>
             </div>
         </div>
