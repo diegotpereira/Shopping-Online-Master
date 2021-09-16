@@ -73,10 +73,30 @@
 
                     &emsp;<i>Total Itens: <?php total_itens(); ?> </i> &emsp;<b>Preço Total:</b><?php precoTotal(); ?>&emsp;
                     <a href="carrinho.php" style="color: yellow; text-decoration: none"><i>Ir Para o Carrinho &emsp;</i></a>
+
+                    <?php
+                        if (isset($_SESSION['cliente_email'])) {
+                            # code...
+                            echo "<a href='verificar.php' style='color:red; text-decoration:none;'>Entrar</a>";
+                        } else {
+                            # code...
+                            echo "<a href='sair.php' style='color:red; text-decoration:none'>Sair</a>";
+                        }
+                        
+                    ?>
                     </span>
                 </div>
 
                 <div id="produtos_box">
+                        <?php
+                                if (!isset($_SESSION['cliente_email'])) {
+                                    # code...
+                                    include("cliente_login.php");
+                                } else {
+                                    # code...
+                                    include("formaDePagamento.php");
+                                }
+                            ?>
                 
                 </div>
             </div>

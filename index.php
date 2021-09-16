@@ -33,7 +33,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="todos_produtos.php">Produtos</a></li>
                 <li><a href="">Conta</a></li>
-                <li><a href="">Entrar</a></li>
+                <li><a href="cliente/minha_conta.php">Entrar</a></li>
                 <li><a href="carrinho.php">Carrinho de Compras</a></li>
                 <li><a href="">Contato</a></li>
             </ul>
@@ -71,8 +71,29 @@
                 <div id="carrinho_compras">
                     <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px;">
 
+                    <?php
+                        if (isset($_SESSION['cliente_email'])) {
+                            # code...
+                            echo "<b>Bem-Vindo $emsp;</b>".$_SESSION['cliente_email'];
+                        } else {
+                            # code...
+                            echo "<b>Bem vindo visitante!</b>";
+                        }
+                        
+                    ?>
+
                     &emsp;<i>Total Itens: <?php total_itens(); ?> </i> &emsp;<b>Preço Total:</b><?php precoTotal(); ?>&emsp;
                     <a href="carrinho.php" style="color: yellow; text-decoration: none"><i>Ir Para o Carrinho &emsp;</i></a>
+
+                    <?php
+                         if (!isset($_SESSION['cliente_email'])) {
+                             # code...
+                             echo "<a href='verificar.php' style='color:red; text-decoration:none;'>Entrar</a>";
+                         } else {
+                             # code...
+                             echo "<a href='sair.php' style='color:red; text-decoration:none'>Sair</a>";
+                         }
+                    ?>
                     </span>
                 </div>
 

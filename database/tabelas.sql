@@ -135,8 +135,83 @@ ALTER TABLE `carrinho`
 
 
 --
--- Dados para a tabela `carrinho
+-- Dados para a tabela `carrinho`
 --
 
 INSERT INTO `carrinho` (`p_id`, `qtd`, `ip_add`) VALUES
 (18, 1, '::1');
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela Clientes
+--
+
+CREATE TABLE `clientes` (
+  `cliente_id` int(10) NOT NULL,
+  `cliente_ip` varchar(255) NOT NULL,
+  `cliente_nome` text NOT NULL,
+  `cliente_email` varchar(100) NOT NULL,
+  `cliente_pass` varchar(100) NOT NULL,
+  `cliente_pais` text NOT NULL,
+  `cliente_cidade` text NOT NULL,
+  `cliente_contato` varchar(255) NOT NULL,
+  `cliente_endereco` text NOT NULL,
+  `cliente_imagem` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+--
+-- Índices para tabela de clientes
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`cliente_id`);
+
+--
+-- AUTO_INCREMENT para tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `cliente_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Dados para tabela `clientes`
+--
+
+INSERT INTO `clientes` (`cliente_id`, `cliente_ip`, `cliente_nome`, `cliente_email`, `cliente_pass`, `cliente_pais`, `cliente_cidade`, `cliente_contato`, `cliente_endereco`, `cliente_imagem`) VALUES
+(1, '::1', 'ASHUTOSH RAJ', 'ashutoshraj908@gmail.com', '1230', 'India', 'DALTONGANJ', '8797958296', 'PRITY NIWAS,NEAR S.P KOTHI ROAD,ABADGANJ', 'qaz.jpg');
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `admins`
+--
+
+CREATE TABLE `admins` (
+  `usuario_id` int(10) NOT NULL,
+  `usuario_email` varchar(255) NOT NULL,
+  `usuario_pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indices para tabela `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`usuario_id`);
+
+--
+-- AUTO_INCREMENT para tabela `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `usuario_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+
+--
+-- Dados para tabela `admins`
+--
+
+INSERT INTO `admins` (`usuario_id`, `usuario_email`, `usuario_pass`) VALUES
+(1, 'admin@gmail.com', '1230'),
+(2, 'root@gmail.com', '0321');
