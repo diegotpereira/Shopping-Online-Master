@@ -1,7 +1,7 @@
 <?php 
   $data_base = mysqli_connect("localhost", "root", "root", "db_shopping_online");
 
-  echo "Conexão com Sucesso!";
+  // echo "Conexão com Sucesso!";
 
   if (mysqli_connect_errno()) {
     # code...

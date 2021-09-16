@@ -11,12 +11,12 @@
 
                    <tr>
                        <td align="right"><br><br><br><b>Email:</b></td>
-                       <td><br><br><input type="text" name="email" placeholder="Digite seu email" required></td>
+                       <td><br><br><br><input type="text" name="email" placeholder="Digite seu email" required></td>
                    </tr>
 
                    <tr>
-                       <td align="right"><br><br><br><b>Senha:</b></td>
-                       <td><br><br><input type="password" name="pass" placeholder="Digite sua Senha" required></td>
+                       <td align="right"><b>Senha:</b></td>
+                       <td><input type="password" name="pass" placeholder="Digite sua Senha" required></td>
                    </tr>
 
                    <tr align="right">
@@ -31,8 +31,8 @@
 <?php
     if (isset($_POST['login'])) {
         # code...
-        $c_email = $_POST['c_email'];
-        $c_pass = $_POST['c_pass'];
+        $c_email = $_POST['email'];
+        $c_pass = $_POST['pass'];
 
         $seleciona_cliente = "SELECT * FROM clientes WHERE cliente_pass = '$c_pass' AND cliente_email = '$c_email'";
 

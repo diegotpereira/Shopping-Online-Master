@@ -1,6 +1,6 @@
 <?php
- session_start();
- include("funcoes/funcoes.php");
+    include("funcoes/funcoes.php");
+    session_start();
 ?>
 
 
@@ -13,8 +13,8 @@
 
     <title>Shopping Online</title>
 
-    <!-- <link rel="stylesheet" href="css/estilo.css" media="all"> -->
-    <style><?php include 'css/estilo.css'; ?></style>
+    <link rel="stylesheet" href="css/estilo.css" media="all" />
+    <!-- <style><?php include 'css/estilo.css'; ?></style> -->
 
 </head>
 <body>
