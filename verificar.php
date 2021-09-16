@@ -94,7 +94,7 @@
                                     include("cliente_login.php");
                                 } else {
                                     # code...
-                                    include("formaDePagamento.php");
+                                    include("payment.php");
                                 }
                             ?>
                 
