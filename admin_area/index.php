@@ -44,7 +44,7 @@
                     }
                     if (isset($_GET['editar_produto'])) {
                         # code...
-                        include("editar_pro.php");
+                        include("editar_produto.php");
                     }
                     if (isset($_GET['inserir_categoria'])) {
                         # code...
