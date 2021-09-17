@@ -38,11 +38,11 @@
                    </tr>
 
                    <tr>
-                       <td align="right"><br>Nome: </td>
+                       <td align="right"><br>Nome:</td>
                        <td><br><input type="text" name="c_nome" value="<?php echo $nome; ?>" required></td>
                    </tr>
                    <tr>
-                       <td align="right">Email: </td>
+                       <td align="right">Email:</td>
                        <td><input type="text" name="c_email" value="<?php echo $email; ?>" required></td>
                    </tr>
                    <tr>
@@ -101,7 +101,7 @@
         $c_pass = $_POST['c_pass'];
         $c_imagem = $_FILES['c_imagem']['nome'];
         $c_imagem_tmp = $_FILES['c_imagem']['tmp_nome'];
-        $c_pais = $_POST['c_pais'];
+        // $c_pais = $_POST['c_pais'];
         $c_cidade = $_POST['c_cidade'];
         $c_contato = $_POST['c_contato'];
         $c_endereco = $_POST['c_endereco'];
