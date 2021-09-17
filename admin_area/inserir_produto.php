@@ -102,8 +102,8 @@
        $produto_keywords = $_POST['produto_keywords'];
 
        // obtendo imagem de feilds
-       $produto_imagem = $_FILES['produto_imagem']['nome'];
-       $produto_imagem_tmp = $_FILES['produto_imagem']['tmp_nome'];
+       $produto_imagem = $_FILES['produto_imagem']['name'];
+       $produto_imagem_tmp = $_FILES['produto_imagem']['tmp_name'];
 
        move_uploaded_file($produto_imagem_tmp, "produto)imagens/$produto_imagem");
 
