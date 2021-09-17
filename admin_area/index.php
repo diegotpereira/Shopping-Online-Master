@@ -21,7 +21,7 @@
             <div id="right">
                 <h2 style="text-align: center; color: yellow;">Gerenciar Conteúdo</h2>
                 <a href="index.php?inserir_produto">Inserir Produto</a>
-                <a href="index.php?exibir_produto">Exibir Produto</a>
+                <a href="index.php?exibir_produtos">Exibir Produto</a>
                 <a href="index.php?inserir_categoria">Inserir Categoria</a>
                 <a href="index.php?exibir_categoria">Exibir Todas Categorias</a>
                 <a href="index.php?inserir_marcas">Inserir Nova Marca</a>
@@ -38,9 +38,9 @@
                         # code...
                         include("inserir_produto.php");
                     }
-                    if (isset($_GET['exibir_produto'])) {
+                    if (isset($_GET['exibir_produtos'])) {
                         # code...
-                        include("exibir_produto.php");
+                        include("exibir_produtos.php");
                     }
                     if (isset($_GET['editar_produto'])) {
                         # code...
