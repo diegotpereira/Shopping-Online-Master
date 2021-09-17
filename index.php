@@ -32,8 +32,8 @@
             <ul id="menu">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="todos_produtos.php">Produtos</a></li>
-                <li><a href="">Conta</a></li>
-                <li><a href="cliente/minha_conta.php">Entrar</a></li>
+                <li><a href="cliente/minha_conta.php">Conta</a></li>
+                <li><a href="cliente/login.php">Entrar</a></li>
                 <li><a href="carrinho.php">Carrinho de Compras</a></li>
                 <li><a href="">Contato</a></li>
             </ul>

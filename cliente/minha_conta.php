@@ -74,7 +74,7 @@
             <div id="content_area">
                   <?php carrinho(); ?>
                 <div id="carrinho_compras">
-                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px;">
+                    <span style="float: left; font-size: 18px; padding: 5px; line-height: 40px;">
                     <?php
                          if (isset($_SESSION['cliente_email'])) {
                              # code...
@@ -103,8 +103,8 @@
                                    # code...
                                    if (!isset($_GET['deletar_conta'])) {
                                        # code...
-                                       echo "<h2> Bem $c_nome </h2><br>";
-                                       echo "<br> Você pode ver o andamento de seus pedidos clicando aqui <a href='muinha_conta.php?meus_pedidos'>link</a></b>";
+                                       echo "<h2> Bem-Vindo $c_nome </h2><br>";
+                                       echo "<br> Você pode ver o andamento de seus pedidos clicando aqui <a href='minha_conta.php?meus_pedidos'>link</a></b>";
                                    }
                                }
                            }

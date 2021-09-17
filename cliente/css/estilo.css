@@ -205,6 +205,11 @@ body {
     text-align: left;
 }
 
+#cats img {
+    border: 2px solid white;
+    padding: 4px;
+}
+
 #cats a:hover {
     color: white;
     font-weight: bold;
