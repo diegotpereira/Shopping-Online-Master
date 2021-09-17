@@ -168,6 +168,7 @@ body {
 #content_area {
     width: 700px;
     margin: auto;
+    float: left;
 }
 
 #sidebar {

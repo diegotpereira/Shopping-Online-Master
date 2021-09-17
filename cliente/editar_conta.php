@@ -33,8 +33,7 @@
         <div id="registro">
             <form action="" method="POST" enctype="multipart/form-data">
                <table align="center" width="750">
-                   <tr>
-                       <br>
+                   <tr><br>
                        <td colspan="2" align="center" style="color: red;"><h2>Atualizar Conta</h2></td>
                    </tr>
 
