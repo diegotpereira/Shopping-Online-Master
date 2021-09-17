@@ -1,0 +1,156 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    background: #187eae;
+}
+
+.main_wrapper {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#header {
+    width: auto;
+    height: auto;
+    background-image: url(../images/head);
+    border-bottom: 5px groove black;
+}
+
+#left {
+    width: 1150px;
+    height: 620px;
+    background-image: url(../imagens/bi.jpeg);
+    float: center;
+}
+
+#right {
+    padding: 9px;
+    text-align: center;
+    width: 250px;
+    height: 600px;
+    float: right;
+    border-left: 5px groove black;
+    background: #187eae;
+}
+
+#right a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: palatino;
+    margin: 6px;
+    display: block;
+    padding: 6px;
+}
+
+#right a:hover {
+    /* when someone points the cursor */
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    /* adding underline*/
+}
