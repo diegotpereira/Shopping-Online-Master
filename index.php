@@ -74,7 +74,7 @@
                     <?php
                         if (isset($_SESSION['cliente_email'])) {
                             # code...
-                            echo "<b>Bem-Vindo $emsp;</b>".$_SESSION['cliente_email'];
+                            echo "<b>Bem-Vindo &emsp;</b>".$_SESSION['cliente_email'];
                         } else {
                             # code...
                             echo "<b>Bem vindo visitante!</b>";

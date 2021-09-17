@@ -43,7 +43,7 @@
                             <img src='admin_area/produto_imagens/$pro_imagem' width='180' height='180' />
                             <p> R$ <br>$pro_preco</b></p>
                             <a href='detalhes.php?pro_id=$pro_id' style='float:left'>Detalhes</a>
-                            <a href='index.php?add_carrinho=$pro_id'><button style='float:right'>Adicionar ao Carrinho</button></a>
+                            <a href='index.php?add_carrinho=$pro_id'><button style='float:right'>Adicionar no Carrinho</button></a>
                         </div>";
               }
           }
