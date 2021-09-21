@@ -23,8 +23,8 @@
                 <a href="index.php?inserir_produto">Inserir Produto</a>
                 <a href="index.php?exibir_produtos">Exibir Produto</a>
                 <a href="index.php?inserir_categoria">Inserir Categoria</a>
-                <a href="index.php?exibir_categoria">Exibir Todas Categorias</a>
-                <a href="index.php?inserir_marcas">Inserir Nova Marca</a>
+                <a href="index.php?exibir_categorias">Exibir Todas Categorias</a>
+                <a href="index.php?inserir_marca">Inserir Nova Marca</a>
                 <a href="index.php?exibir_marcas">Exibir Todas Marcas</a>
                 <a href="index.php?exibir_clientes">Exibir Clientes</a>
                 <a href="index.php?exibir_pedidos">Exibir Pedidos</a>
@@ -50,13 +50,13 @@
                         # code...
                         include("inserir_categoria.php");
                     }
-                    if (isset($_GET['exibir_categoria'])) {
+                    if (isset($_GET['exibir_categorias'])) {
                         # code...
-                        include("exibir_categoria.php");
+                        include("exibir_categorias.php");
                     }
-                    if (isset($_GET['editar_cat'])) {
+                    if (isset($_GET['editar_categoria'])) {
                         # code...
-                        include("editar_cat.php");
+                        include("editar_categoria.php");
                     }
                     if (isset($_GET['inserir_marca'])) {
                         # code...

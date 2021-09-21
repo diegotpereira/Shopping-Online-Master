@@ -34,7 +34,7 @@
           <td><br><?php echo $pro_titulo; ?></td>
           <td><br><img src="produto_imagens/<?php echo $pro_imagem; ?>" width="80" height="50" /></td>
           <td><br><?php echo $pro_preco; ?></td>
-          <td><br><a href="index.php?editar_pro = <?php echo $pro_id; ?>">Editar</a></td>
+          <td><br><a href="index.php?editar_produto=<?php echo $pro_id; ?>">Editar</a></td>
           <td><br><a href="deletar_pro.php?deletar_pro = <?php echo $pro_id; ?>">Deletar</a></td>
       </tr>
       <?php } ?>
