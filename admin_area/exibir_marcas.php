@@ -36,7 +36,7 @@
           <td><br><?php echo $i; ?></td>
           <td><br><?php echo $marca_id; ?></td>
           <td><br><?php echo $marca_titulo; ?></td>
-          <td><br><a href="index.php?editar_marca = <?php echo $marca_id; ?>">Editar</a></td>
+          <td><br><a href="index.php?editar_marca=<?php echo $marca_id; ?>">Editar</a></td>
           <td><br><a href="deletar_marca.php?deletar_marca = <?php echo $marca_id; ?>">Deletar</a></td>
       </tr>
       <?php } ?>

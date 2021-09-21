@@ -35,7 +35,7 @@
         if ($run_marca) {
             # code...
             echo "<script>alert('Marca atualizada com Sucesso..!')</script>";
-            echo "<script>window.open('index.php?exibir_marcas', '_self')</script>";
+            echo "<script> window.open('index.php?exibir_marcas', '_self')</script>";
         }
     }
 ?>
